@@ -4,10 +4,9 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
-## Librerías WiFi
+## Librerías WiFi
 ```cpp
-#if defined(ESP8266)
+#if defined(ESP8266)
     #define HARDWARE "ESP8266"
     #include "ESP8266WiFi.h"
 
@@ -16,6 +15,6 @@
     #include "WiFi.h"
 
 #endif
-```
+```
 
-
+

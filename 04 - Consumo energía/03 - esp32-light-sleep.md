@@ -4,20 +4,18 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
 ## Uso del modo Light Sleep en el IDE de Arduino
 ```cpp
-/**
+/**
  * @brief Enter light sleep with the configured wakeup options
  */
 esp_err_t esp_light_sleep_start(void);
-```
+```
 
-
 
 ##  Uso del modo Light Sleep
 ```cpp
-void setup() 
+void setup() 
 {
     Serial.begin(115200);
     delay(5000);
@@ -32,6 +30,6 @@ void loop() {
   esp_sleep_enable_timer_wakeup(2 * 1000000); //light sleep durante 2 segundos
   esp_light_sleep_start();  
 }
-```
+```
 
-
+

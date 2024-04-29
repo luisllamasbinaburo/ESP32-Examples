@@ -4,10 +4,9 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
 ## Uso del DAC en el ESP32
 ```cpp
-const int raw = 1500 * 255 / 3300;
+const int raw = 1500 * 255 / 3300;
 
 void setup() {
   // Inicialización del DAC
@@ -17,13 +16,12 @@ void setup() {
 void loop() {
   // No es necesario realizar nada en el bucle principal
 }
-```
+```
 
-
 
 ## Generación de señales más complejas
 ```cpp
-const int tableSize = 100;
+const int tableSize = 100;
 const uint8_t sinTable[tableSize] = {127, 139, 150, ...}; // Valores precalculados
 
 int index = 0;
@@ -38,6 +36,6 @@ void loop() {
   index = (index + 1) % tableSize;
   delay(10); // Controla la frecuencia de la onda
 }
-```
+```
 
-
+

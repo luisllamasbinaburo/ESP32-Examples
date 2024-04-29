@@ -4,10 +4,9 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
 ## Cómo generar números aleatorios en ESP32
 ```cpp
-void setup()
+void setup()
 {
   Serial.begin(115200);
 }
@@ -18,10 +17,10 @@ void loop()
   Serial.println(randomNumber); 
   delay(2000);
 }
-```
+```
 
-```cpp
-void setup() 
+```cpp
+void setup() 
 {
   Serial.begin(115200);
 }
@@ -35,6 +34,6 @@ void loop()
  
   delay(1000);
 }
-```
+```
 
-
+

@@ -4,10 +4,9 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
 ## Cómo leer la entrada analógica del ESP32
 ```cpp
-void setup() 
+void setup() 
 {
   Serial.begin(9600);
 }
@@ -18,13 +17,12 @@ void loop()
   Serial.println(sensorValue);
   delay(100);
 }
-```
+```
 
-
 
 ## Más funciones útiles
 ```cpp
-// Establece los bits de muestra y la resolución.
+// Establece los bits de muestra y la resolución.
 // Puede ser un valor entre 9 (0 – 511) a 12 bits (0 – 4095).
 // Resolución predeterminada: 12 bits.
 analogReadResolution(resolución);
@@ -72,6 +70,6 @@ adcAttachPin(pin);
 adcStart(pin);
 adcBusy(pin);
 adcEnd(pin);
-```
+```
 
-
+

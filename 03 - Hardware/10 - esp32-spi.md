@@ -4,38 +4,35 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
 ## El bus SPI en el ESP32
 ```cpp
-void setup() {
+void setup() {
   // Inicializar comunicación SPI
   SPI.begin();
 }
-```
+```
 
-```cpp
-SPIClass vspi = SPIClass(VSPI);
+```cpp
+SPIClass vspi = SPIClass(VSPI);
 
 MySPI.begin(VSPI_SCLK, VSPI_MISO, VSPI_MOSI, VSPI_SS);
-```
+```
 
-
 
 ## Enviar Datos
 ```cpp
-byte dataToSend = 0xAA;
+byte dataToSend = 0xAA;
 byte receivedData;
 
 digitalWrite(SS, LOW);  // Bajar línea CS/SS para seleccionar el dispositivo
 receivedData = SPI.transfer(dataToSend);  // Enviar y recibir datos
 digitalWrite(SS, HIGH); // Subir línea CS/SS para finalizar la comunicación
-```
+```
 
-
 
 ## Usando múltiples SPI en el ESP32
 ```cpp
-#include <SPI.h>
+#include <SPI.h>
 
 #define HSPI 2  // 2 para S2 y S3, 1 para S1
 #define VSPI 3
@@ -64,6 +61,6 @@ void loop()
 {
   delay(1000);  // do nothing
 }
-```
+```
 
-
+

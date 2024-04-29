@@ -4,10 +4,9 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
 ## Ejemplo de código
 ```cpp
-hw_timer_t *timer = NULL;
+hw_timer_t *timer = NULL;
 
 volatiel void has_expired = false;
 void IRAM_ATTR timerInterrupcion() {
@@ -33,6 +32,6 @@ void loop() {
   }
   
 }
-```
+```
 
-
+

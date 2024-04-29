@@ -4,49 +4,45 @@
 >
 > Todo el contenido distribuido bajo licencia CCC, salvo indicación expresa
 
-
 ## Guardar Datos en Memorias RTC
 ```cpp
-RTC_DATA_ATTR int bootCount = 0;
-```
+RTC_DATA_ATTR int bootCount = 0;
+```
 
-
 
 ## Stub wake
 ```cpp
-void RTC_IRAM_ATTR esp_wake_deep_sleep() {
+void RTC_IRAM_ATTR esp_wake_deep_sleep() {
     esp_default_wake_deep_sleep();
     // add additional functionality here
 }
-```
+```
 
-
 
 ## Uso del modo Deep Sleep en el IDE de Arduino
 ```cpp
-#include <esp_sleep.h>
-```
+#include <esp_sleep.h>
+```
 
-```cpp
-esp_sleep_enable_timer_wakeup(5 * 1000000);
+```cpp
+esp_sleep_enable_timer_wakeup(5 * 1000000);
 esp_deep_sleep_start();
-```
+```
 
-```cpp
-/**
+```cpp
+/**
  * @brief Enter deep-sleep mode
  *
  * The device will automatically wake up after the deep-sleep time
  * Upon waking up, the device calls deep sleep wake stub, and then proceeds to load application.
  */
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-```
+```
 
-
 
 ##  Uso del modo Deep Sleep
 ```cpp
-void setup()
+void setup()
 {
   Serial.begin(115200);
   Serial.println("Iniciando...");
@@ -60,13 +56,12 @@ void loop()
 {
   // Esta función nunca se ejecutará debido al modo Deep Sleep
 }
-```
+```
 
-
 
 ##  Uso de la memoria del RTC
 ```cpp
-RTC_DATA_ATTR int bootCount = 0;
+RTC_DATA_ATTR int bootCount = 0;
 
 void setup()
 {
@@ -84,13 +79,12 @@ void loop()
 {
   // Esta función nunca se ejecutará debido al modo Deep Sleep
 }
-```
+```
 
-
 
 ##  Uso de la función wake stub
 ```cpp
-RTC_DATA_ATTR int bootCount = 0;
+RTC_DATA_ATTR int bootCount = 0;
 
 void RTC_IRAM_ATTR esp_wake_deep_sleep() {
     esp_default_wake_deep_sleep();
@@ -110,6 +104,6 @@ void loop()
 {
   // Esta función nunca se ejecutará debido al modo Deep Sleep
 }
-```
+```
 
-
+
